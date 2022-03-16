@@ -893,6 +893,7 @@ ul {
 .gallery__slide:focus-visible:not(:active) img {
   opacity: 1;
   outline: 3px solid var(--active);
+  outline-offset: -3px;
 }
 
 .gallery__slide:active::after {
@@ -939,7 +940,8 @@ ul {
 }
 
 .catalog__painter {
-  width: 50%;
+  width: 49%;
+  margin-right: 17px;;
 }
 
 .accordion {
@@ -1559,6 +1561,10 @@ ul {
   /* position: relative; */
 }
 
+.contacts__form-input-container {
+  position: relative;
+}
+
 .contacts__form-input {
   width: 270px;
   max-height: 50px;
@@ -1572,7 +1578,7 @@ ul {
   color: var(--select-border);
   cursor: pointer;
   transition: background-color .3s ease-in-out;
-  position: relative;
+  /* position: relative; */
 }
 
 .contacts__form-input:focus-visible {
@@ -1592,7 +1598,7 @@ ul {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  transform: translate(27px, -20px);
+  transform: translate(26px, -67px);
   display: flex;
   white-space: nowrap;
 }
@@ -1651,7 +1657,7 @@ ul {
 }
 
 .map {
-  width: 1920px;
+  max-width: 1920px;
   height: 700px;
   position: relative;
 }

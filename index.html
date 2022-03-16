@@ -718,10 +718,14 @@
           </div>
           <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="contacts__form flex"
             novalidate="novalidate">
-            <input class="contacts__form-input input-name" id="name" type="text" pattern="[A-Za-zА-Яа-яЁё]" name="name" placeholder="Имя*" data-validate-field="name"
+            <div class="contacts__form-input-container">
+              <input class="contacts__form-input input-name" id="name" type="text" pattern="[A-Za-zА-Яа-яЁё]" name="name" placeholder="Имя*" data-validate-field="name"
               required>
-            <input class="contacts__form-input input-tel" id="tel" type="tel" name="phone" placeholder="Телефон*" data-validate-field="tel"
+            </div>
+            <div class="contacts__form-input-container">
+              <input class="contacts__form-input input-tel" id="tel" type="tel" name="phone" placeholder="Телефон*" data-validate-field="tel"
               data-validate-rules="phone" required>
+            </div>
             <button class="btn form-btn">Заказать обратный звонок</button>
           </form>
           <div class="contacts__connection">
