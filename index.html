@@ -19,10 +19,55 @@
   <header class="header">
     <div class="header__top">
       <div class="container header__container flex">
-        <a href="#" class="header__logo flex">
-          <img src="img/logo.svg" alt="Логотип">
+        <button class="header__btn-open btn" aria-label="меню">
+        </button>
+        <a class="header__logo flex">
+          <picture>
+            <source srcset="img/logo-320.svg" media="(max-width: 420px)">
+            <source srcset="img/logo-1024.svg" media="(max-width: 1024px)">
+            <img src="img/logo.svg" alt="Логотип Blanchard">
+          </picture>
         </a>
+        <div class="header__top__block__search">
+          <button class="btn header__top__search search-btn-state" type="button" aria-label="поиск по сайту">
+            <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="9.15446" height="2.28862"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
+                fill="white" />
+            </svg>
+          </button>
+          <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="header__top__form flex">
+            <div class="header__top__form-left flex">
+              <button class="btn header__top__form-search search-btn-state " type="submit" aria-label="поиск по сайту">
+                <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="9.15446" height="2.28862"
+                    transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
+                    fill="white" />
+                </svg>
+              </button>
+              <input class="header__top__input" type="text" aria-label="поиск">
+            </div>
+            <button class="header__top__search-close btn-close-state btn" type="button" aria-label="закрыть">
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="29.567" height="2.9567" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09326 0)"
+                  fill="white" />
+                <rect width="29.567" height="2.9567" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9075)"
+                  fill="white" />
+              </svg>
+            </button>
+          </form>
+        </div>
         <nav class="header__top__nav flex">
+          <button class="header__nav__close btn-close-state btn" aria-label="закрыть меню">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white" />
+              <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white" />
+            </svg>
+          </button>
           <ul class="header__top__list flex">
             <li class="header__top__item">
               <a href="#about" class="header__top__link">О нас</a>
@@ -43,15 +88,15 @@
               <a href="#contacts" class="header__top__link">Контакты</a>
             </li>
           </ul>
+          <a href="#" class="header__entry flex">
+            <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.62056 9.09278L6.63889 10.1111L10.25 6.5L6.63889 2.88889L5.62056 3.90722L7.48389 5.77778H0.5V7.22222H7.48389L5.62056 9.09278ZM12.0556 0H1.94444C1.14278 0 0.5 0.65 0.5 1.44444V4.33333H1.94444V1.44444H12.0556V11.5556H1.94444V8.66667H0.5V11.5556C0.5 12.35 1.14278 13 1.94444 13H12.0556C12.85 13 13.5 12.35 13.5 11.5556V1.44444C13.5 0.65 12.85 0 12.0556 0Z"
+                fill="white" />
+            </svg>
+            Войти
+          </a>
         </nav>
-        <a href="#" class="header__entry">
-          <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M5.62056 9.09278L6.63889 10.1111L10.25 6.5L6.63889 2.88889L5.62056 3.90722L7.48389 5.77778H0.5V7.22222H7.48389L5.62056 9.09278ZM12.0556 0H1.94444C1.14278 0 0.5 0.65 0.5 1.44444V4.33333H1.94444V1.44444H12.0556V11.5556H1.94444V8.66667H0.5V11.5556C0.5 12.35 1.14278 13 1.94444 13H12.0556C12.85 13 13.5 12.35 13.5 11.5556V1.44444C13.5 0.65 12.85 0 12.0556 0Z"
-              fill="white" />
-          </svg>
-          Войти
-        </a>
       </div>
     </div>
     <div class="header__bottom">
@@ -59,10 +104,10 @@
         <nav class="header__bottom__nav">
           <ul class="header__bottom__list flex">
             <li class="header__bottom__item">
-              <button class="header__item__btn btn" data-path="one">
+              <button class="header__item__btn js-header-dropdown-btn btn" data-path="one">
                 <span class="header__item-subtitle">Реализм</span>
               </button>
-              <div class="header__dropdown" data-target="one">
+              <div class="header__dropdown js-header-drop" data-target="one">
                 <ul class="header__dropdown-list simplebar" data-simplebar>
                   <li class="header__dropdown-list__item tintoretto">
                     <a class="header__dropdown-link">Тинторетто</a>
@@ -80,10 +125,10 @@
               </div>
             </li>
             <li class="header__bottom__item">
-              <button class="header__item__btn btn" data-path="tow">
+              <button class="header__item__btn js-header-dropdown-btn btn" data-path="tow">
                 <span class="header__item-subtitle">Импрессионизм</span>
               </button>
-              <div class="header__dropdown" data-target="tow">
+              <div class="header__dropdown js-header-drop" data-target="tow">
                 <ul class="header__dropdown-list simplebar" data-simplebar>
                   <li class="header__dropdown-list__item mone">
                     <a class="header__dropdown-link">Моне</a>
@@ -101,10 +146,10 @@
               </div>
             </li>
             <li class="header__bottom__item">
-              <button class="header__item__btn btn" data-path="three">
+              <button class="header__item__btn js-header-dropdown-btn btn" data-path="three">
                 <span class="header__item-subtitle">Постимпрессионизм</span>
               </button>
-              <div class="header__dropdown" data-target="three">
+              <div class="header__dropdown js-header-drop" data-target="three">
                 <ul class="header__dropdown-list simplebar" data-simplebar>
                   <li class="header__dropdown-list__item vangog">
                     <a class="header__dropdown-link">Ван Гог</a>
@@ -122,10 +167,10 @@
               </div>
             </li>
             <li class="header__bottom__item">
-              <button class="header__item__btn btn" data-path="four">
+              <button class="header__item__btn js-header-dropdown-btn btn" data-path="four">
                 <span class="header__item-subtitle">Авангард</span>
               </button>
-              <div class="header__dropdown" data-target="four">
+              <div class="header__dropdown js-header-drop" data-target="four">
                 <ul class="header__dropdown-list simplebar" data-simplebar>
                   <li class="header__dropdown-list__item kandincki">
                     <a class="header__dropdown-link">Кандинский</a>
@@ -143,10 +188,10 @@
               </div>
             </li>
             <li class="header__bottom__item">
-              <button class="header__item__btn btn" data-path="five">
+              <button class="header__item__btn js-header-dropdown-btn btn" data-path="five">
                 <span class="header__item-subtitle">Футуризм</span>
               </button>
-              <div class="header__dropdown" data-target="five">
+              <div class="header__dropdown js-header-drop" data-target="five">
                 <ul class="header__dropdown-list simplebar" data-simplebar>
                   <li class="header__dropdown-list__item karra">
                     <a class="header__dropdown-link">Карра</a>
@@ -186,28 +231,25 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container hero__container">
-        <!-- <div class="hero__banner banner"> -->
         <div class="hero__swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide hero-slide-1"></div>
             <div class="swiper-slide hero-slide-2"></div>
             <div class="swiper-slide hero-slide-3"></div>
           </div>
-          <!-- <div class="swiper-pagination hero__pagination"></div> -->
         </div>
         <div class="hero__context">
           <h1 class="hero__title">
             Прикоснитесь к&nbsp;прекрасному
           </h1>
           <p class="hero__descr">
-            Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для
-            новых предложений.
+            Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки
+            для новых предложений.
           </p>
           <a href="#" class="hero__btn" aria-label="Подписаться на рассылку">
             Подписаться на рассылку
           </a>
         </div>
-        <!-- </div> -->
       </div>
     </section>
     <!-- ABOUT -->
@@ -247,7 +289,7 @@
           </div>
           <div class="gallery__checkbox flex">
             <label class="checkbox-wrap">
-              <input class="checkbox visually-hidden" type="checkbox" name="check-one" aria-label="XIX век">
+              <input class="checkbox visually-hidden" type="checkbox" name="check-one" aria-label="девятнадцатый век">
               <span class="checkbox-content">
                 <span class="visual-check"></span>
                 <span class="check-text">XIX век</span>
@@ -255,7 +297,7 @@
               </span>
             </label>
             <label class="checkbox-wrap">
-              <input class="checkbox visually-hidden" type="checkbox" name="check-two" aria-label="XX век">
+              <input class="checkbox visually-hidden" type="checkbox" name="check-two" aria-label="двадцатый век">
               <span class="checkbox-content">
                 <span class="visual-check"></span>
                 <span class="check-text">XX век</span>
@@ -272,32 +314,138 @@
             </label>
           </div>
         </div>
-        <div class="gallery__right">
+        <div class="gallery__right flex">
+          <div class="gallery__swiper-btn">
+            <button class="sw-btn gallery__swiper-button-prev"></button>
+            <div class="gallery__pagination"></div>
+            <button class="sw-btn gallery__swiper-button-next"></button>
+          </div>
           <div class="gallery__swiper">
-            <div class="gallery__swiper-btn">
-              <button class="sw-btn gallery__swiper-button-next" aria-label="Следующий слайд"></button>
-              <div class="gallery__pagination"></div>
-              <button class="sw-btn gallery__swiper-button-prev" aria-label="Предыдущий слайд"></button>
-            </div>
             <div class="swiper-wrapper">
-              <div class="swiper-slide gallery__slide" tabindex="0">
-                <img class="gallery__slide-img" src="img/gallery-swiper-1.jpg" alt="">
+              <div class="swiper-slide gallery__slide" data-path="modal-1">
+                <picture class="gallery__slide-img">
+                  <source srcset="img/gallery-swiper-1-320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-swiper-1-768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-swiper-1-1024.jpg" media="(max-width: 1024px)">
+                  <img src="img/gallery-swiper-1.jpg" alt="слайд первый">
+                </picture>
               </div>
-              <div class="swiper-slide gallery__slide" tabindex="0">
-                <img class="gallery__slide-img" src="img/gallery-swiper-2.jpg" alt="">
+              <div class="swiper-slide gallery__slide" data-path="modal-2">
+                <picture class="gallery__slide-img">
+                  <source srcset="img/gallery-swiper-2-320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-swiper-2-768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-swiper-2-1024.jpg" media="(max-width: 1024px)">
+                  <img src="img/gallery-swiper-2.jpg" alt="слайд второй">
+                </picture>
               </div>
-              <div class="swiper-slide gallery__slide" tabindex="0">
-                <img class="gallery__slide-img" src="img/gallery-swiper-3.jpg" alt="">
+              <div class="swiper-slide gallery__slide">
+                <picture class="gallery__slide-img">
+                  <source srcset="img/gallery-swiper-3-320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-swiper-3-768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-swiper-3-1024.jpg" media="(max-width: 1024px)">
+                  <img src="img/gallery-swiper-3.jpg" alt="слайд третий">
+                </picture>
               </div>
-              <div class="swiper-slide gallery__slide" tabindex="0">
-                <img class="gallery__slide-img" src="img/gallery-swiper-4.jpg" alt="">
+              <div class="swiper-slide gallery__slide">
+                <picture class="gallery__slide-img">
+                  <source srcset="img/gallery-swiper-4-320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-swiper-4-768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-swiper-4-1024.jpg" media="(max-width: 1024px)">
+                  <img src="img/gallery-swiper-4.jpg" alt="слайд четвертый">
+                </picture>
               </div>
-              <div class="swiper-slide gallery__slide" tabindex="0">
-                <img class="gallery__slide-img" src="img/gallery-swiper-5.jpg" alt="">
+              <div class="swiper-slide gallery__slide">
+                <picture class="gallery__slide-img">
+                  <source srcset="img/gallery-swiper-5-320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-swiper-5-768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-swiper-5-1024.jpg" media="(max-width: 1024px)">
+                  <img src="img/gallery-swiper-5.jpg" alt="">
+                </picture>
               </div>
-              <div class="swiper-slide gallery__slide" tabindex="0">
-                <img class="gallery__slide-img" src="img/gallery-swiper-6.jpg" alt="">
+              <div class="swiper-slide gallery__slide">
+                <picture class="gallery__slide-img">
+                  <source srcset="img/gallery-swiper-6-320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-swiper-6-768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-swiper-6-1024.jpg" media="(max-width: 1024px)">
+                  <img src="img/gallery-swiper-6.jpg" alt="">
+                </picture>
               </div>
+            </div>
+          </div>
+          <div class="gallery__modals">
+            <div class="gallery__modal-overlay">
+              <div class="gallery__modal modal-1 flex" data-target="modal-1">
+                <picture>
+                  <source media="(max-width: 680px)" srcset="img/gallery-modal-320.jpg">
+                  <source media="(max-width: 768px)" srcset="img/gallery-modal-768.jpg">
+                  <source media="(max-width: 1024px)" srcset="img/gallery-modal-1024.jpg">
+                  <img class="gallery__modal__img flex" src="img/gallery-modal.jpg" alt="картина Казимира Малевича">
+                </picture>
+                <div class="gallery__modal__context flex">
+                  <button class="gallery__modal__btn btn" type="button">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z"
+                        fill="black" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                        fill="black" />
+                    </svg>
+                  </button>
+                  <h3 class="gallery__modal__title">
+                    Казимир Малевич
+                  </h3>
+                  <strong class="gallery__modal__subtitle">
+                    &laquo;Женщина с&nbsp;граблями&raquo;
+                  </strong>
+                  <span class="gallery__modal__data">
+                    1931-1932
+                  </span>
+                  <p class="gallery__modal__text">
+                    Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+                    за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после
+                    Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+                  </p>
+                </div>
+              </div>
+              <div class="gallery__modal modal-2 flex" data-target="modal-2">
+                <picture>
+                  <source media="(max-width: 680px)" srcset="img/gallery-modal-320.jpg">
+                  <source media="(max-width: 768px)" srcset="img/gallery-modal-768.jpg">
+                  <source media="(max-width: 1024px)" srcset="img/gallery-modal-1024.jpg">
+                  <img class="gallery__modal__img flex" src="img/gallery-modal.jpg" alt="картина Казимира Малевича">
+                </picture>
+                <div class="gallery__modal__context flex">
+                  <button class="gallery__modal__btn btn" type="button">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z"
+                        fill="black" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                        fill="black" />
+                    </svg>
+                  </button>
+                  <h3 class="gallery__modal__title">
+                    Казимир Малевич
+                  </h3>
+                  <strong class="gallery__modal__subtitle">
+                    &laquo;Женщина с&nbsp;граблями&raquo;
+                  </strong>
+                  <span class="gallery__modal__data">
+                    1931-1932
+                  </span>
+                  <p class="gallery__modal__text">
+                    Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+                    за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после
+                    Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+                  </p>
+                </div>
+              </div>
+              <div class="gallery__modal modal-3"></div>
+              <div class="gallery__modal modal-4"></div>
+              <div class="gallery__modal modal-5"></div>
+              <div class="gallery__modal modal-6"></div>
             </div>
           </div>
         </div>
@@ -313,37 +461,55 @@
           нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены
           на&nbsp;независимые элементы.</P>
         <div class="catalog__content flex">
-          <div class="catalog__painter catalog__painter__activ" data-target="girlandailo">
-            <img class="catalog__painter__img" src="img/painter-1.jpg" alt="Доменико Гирландайо">
-            <h3 class="catalog__painter__title subtitle">Доменико Гирландайо</h3>
-            <span class="catalog__painter__data">2&nbsp;июня 1448&nbsp;&mdash; 11&nbsp;января 1494.</span>
-            <p class="catalog__painter__descr descr">Один из&nbsp;ведущих флорентийских художников Кватроченто,
-              основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава
-              художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками.
-              Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя
-              жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того
-              времени).</p>
-          </div>
-          <div class="catalog__painter" data-target="bindo">
-            <img class="catalog__painter__img" src="img/painter-2.jpg" alt="Бенедетто ди Биндо">
-            <h3 class="catalog__painter__title subtitle">Бенедетто ди&nbsp;Биндо</h3>
-            <span class="catalog__painter__data">1385&nbsp;&mdash; 19&nbsp;сентября 1417.</span>
-            <p class="catalog__painter__descr descr">Бенедетто ди&nbsp;Биндо остался в&nbsp;истории искусства как
-              сиенский художник, так сказать, &laquo;второго ряда&raquo;, несмотря на&nbsp;то, что за&nbsp;свою короткую
-              жизнь он&nbsp;выполнил ряд весьма престижных заказов, включая работы в&nbsp;Сиенском соборе (работы
-              в&nbsp;главном соборе республики второстепенным художникам не&nbsp;поручались). Обучение он&nbsp;прошёл
-              у&nbsp;Таддео ди&nbsp;Бартоло, крупного сиенского мастера поздней готики, в&nbsp;боттеге которого
-              Бенедетто трудился вместе с&nbsp;Грегорио ди&nbsp;Чекко. Наибольшее влияние на&nbsp;его творчество оказали
-              работы Симоне Мартини, в&nbsp;частности в&nbsp;выборе колорита, а&nbsp;тонко проработанные лица его
-              персонажей напоминают произведения Джованни да&nbsp;Милано.</p>
-          </div>
-          <div class="catalog__painter" data-target="painter">
-            <img class="catalog__painter__img" src="img/painter-2.jpg" alt="художник">
-            <h3 class="catalog__painter__title subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-            <span class="catalog__painter__data"></span>
-            <p class="catalog__painter__descr descr descr-empty">Пока ничего... Зато мы&nbsp;точно знаем, что
-              в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
-            <a href="#gallery" class="catalog__painter-link">В галерею</a>
+          <div id="painter-list" class="catalog__painter-content">
+            <div class="catalog__painter catalog__painter__activ" data-target="girlandailo">
+              <picture>
+                <source srcset="img/painter-1-768.jpg" media="(max-width: 768px)">
+                <source srcset="img/painter-1-1024.jpg" media="(max-width: 1024px)">
+                <img class="catalog__painter__img" src="img/painter-1.jpg" alt="Доменико Гирландайо">
+              </picture>
+              <h3 class="catalog__painter__title subtitle">Доменико Гирландайо</h3>
+              <span class="catalog__painter__data">2&nbsp;июня 1448&nbsp;&mdash; 11&nbsp;января 1494.</span>
+              <p class="catalog__painter__descr descr">Один из&nbsp;ведущих флорентийских художников Кватроченто,
+                основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава
+                художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными
+                навыками.
+                Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя
+                жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах
+                того
+                времени).</p>
+            </div>
+            <div class="catalog__painter" data-target="bindo">
+              <picture>
+                <source srcset="img/painter-2-768.jpg" media="(max-width: 768px)">
+                <source srcset="img/painter-2-1024.jpg" media="(max-width: 1024px)">
+                <img class="catalog__painter__img" src="img/painter-2.jpg" alt="Бенедетто ди Биндо">
+              </picture>
+              <h3 class="catalog__painter__title subtitle">Бенедетто ди&nbsp;Биндо</h3>
+              <span class="catalog__painter__data">1385&nbsp;&mdash; 19&nbsp;сентября 1417.</span>
+              <p class="catalog__painter__descr descr">Бенедетто ди&nbsp;Биндо остался в&nbsp;истории искусства как
+                сиенский художник, так сказать, &laquo;второго ряда&raquo;, несмотря на&nbsp;то, что за&nbsp;свою
+                короткую
+                жизнь он&nbsp;выполнил ряд весьма престижных заказов, включая работы в&nbsp;Сиенском соборе (работы
+                в&nbsp;главном соборе республики второстепенным художникам не&nbsp;поручались). Обучение он&nbsp;прошёл
+                у&nbsp;Таддео ди&nbsp;Бартоло, крупного сиенского мастера поздней готики, в&nbsp;боттеге которого
+                Бенедетто трудился вместе с&nbsp;Грегорио ди&nbsp;Чекко. Наибольшее влияние на&nbsp;его творчество
+                оказали
+                работы Симоне Мартини, в&nbsp;частности в&nbsp;выборе колорита, а&nbsp;тонко проработанные лица его
+                персонажей напоминают произведения Джованни да&nbsp;Милано.</p>
+            </div>
+            <div class="catalog__painter" data-target="painter">
+              <picture>
+                <source srcset="img/painter-2-768.jpg" media="(max-width: 768px)">
+                <source srcset="img/painter-2-1024.jpg" media="(max-width: 1024px)">
+                <img class="catalog__painter__img" src="img/painter-2.jpg" alt="художник">
+              </picture>
+              <h3 class="catalog__painter__title subtitle">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+              <span class="catalog__painter__data"></span>
+              <p class="catalog__painter__descr descr descr-empty">Пока ничего... Зато мы&nbsp;точно знаем, что
+                в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+              <a href="#gallery" class="catalog__painter-link">В галерею</a>
+            </div>
           </div>
           <div class="accordion">
             <ul class="accordion__list" id="accordion">
@@ -357,76 +523,104 @@
                 <div class="accordion__bottom">
                   <ul class="accordion__bottom-list">
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="bindo">Бенедетто ди Биндо</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link" data-path="bindo">Бенедетто
+                        ди
+                        Биндо</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Бергоньоне, Амброджо</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link"
+                        data-path="painter">Бергоньоне, Амброджо</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Биссоло, Франческо</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link" data-path="painter">Биссоло,
+                        Франческо</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Больтраффио, Джованни</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link"
+                        data-path="painter">Больтраффио, Джованни</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Бонсиньори, Франческо</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link"
+                        data-path="painter">Бонсиньори, Франческо</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Боттичини, Рафаэлло</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link"
+                        data-path="painter">Боттичини,
+                        Рафаэлло</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Брамантино</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link"
+                        data-path="painter">Брамантино</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Бреа, Людовико</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link" data-path="painter">Бреа,
+                        Людовико</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Бьяджо д’Антонио Туччи</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link" data-path="painter">Бьяджо
+                        д’Антонио Туччи</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Веккьетта</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link"
+                        data-path="painter">Веккьетта</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Андреа Верроккьо</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link" data-path="painter">Андреа
+                        Верроккьо</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="girlandailo">Доменико Гирландайо</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link"
+                        data-path="girlandailo">Доменико Гирландайо</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Беноццо Гоццоли</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link" data-path="painter">Беноццо
+                        Гоццоли</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Граначчи, Франческо</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link"
+                        data-path="painter">Граначчи,
+                        Франческо</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Грегорио ди Чекко</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link" data-path="painter">Грегорио
+                        ди Чекко</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Джованни да Удине</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link" data-path="painter">Джованни
+                        да Удине</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Джованни ди Паоло</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link" data-path="painter">Джованни
+                        ди Паоло</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Джорджоне</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link"
+                        data-path="painter">Джорджоне</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Парентино, Бернардо</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link"
+                        data-path="painter">Парентино,
+                        Бернардо</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Пезеллино</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link"
+                        data-path="painter">Пезеллино</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Пьетро Перуджино</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link" data-path="painter">Пьетро
+                        Перуджино</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Перуцци, Бальдассаре</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link" data-path="painter">Перуцци,
+                        Бальдассаре</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Пизанелло</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link"
+                        data-path="painter">Пизанелло</a>
                     </li>
                     <li class="accordion__bottom-item">
-                      <a href="#catalog" class="accordion__bottom-link" data-path="painter">Пинтуриккьо</a>
+                      <a href="#painter-list" class="accordion__bottom-link js-scroll-link"
+                        data-path="painter">Пинтуриккьо</a>
                     </li>
                   </ul>
                 </div>
@@ -439,7 +633,9 @@
                   <button class="accordion__btn btn" tabindex="-1"></button>
                 </div>
                 <div class="accordion__bottom flex">
-                  <div class="accordion__bottom-img"></div>
+                  <div class="accordion__bottom-img">
+                    <span class="accordion__bottom-img-bg"></span>
+                  </div>
                   <div class="accordion__bottom-text">
                     <h3 class="accordion__title-subtitle subtitle">
                       Здесь пока пусто
@@ -458,7 +654,9 @@
                   <button class="accordion__btn btn" tabindex="-1"></button>
                 </div>
                 <div class="accordion__bottom flex">
-                  <div class="accordion__bottom-img"></div>
+                  <div class="accordion__bottom-img">
+                    <span class="accordion__bottom-img-bg"></span>
+                  </div>
                   <div class="accordion__bottom-text">
                     <h3 class="accordion__title-subtitle subtitle">
                       Здесь пока пусто
@@ -477,7 +675,9 @@
                   <button class="accordion__btn btn" tabindex="-1"></button>
                 </div>
                 <div class="accordion__bottom flex">
-                  <div class="accordion__bottom-img"></div>
+                  <div class="accordion__bottom-img">
+                    <span class="accordion__bottom-img-bg"></span>
+                  </div>
                   <div class="accordion__bottom-text">
                     <h3 class="accordion__title-subtitle subtitle">
                       Здесь пока пусто
@@ -496,7 +696,9 @@
                   <button class="accordion__btn btn" tabindex="-1"></button>
                 </div>
                 <div class="accordion__bottom flex">
-                  <div class="accordion__bottom-img"></div>
+                  <div class="accordion__bottom-img">
+                    <span class="accordion__bottom-img-bg"></span>
+                  </div>
                   <div class="accordion__bottom-text">
                     <h3 class="accordion__title-subtitle subtitle">
                       Здесь пока пусто
@@ -515,7 +717,9 @@
                   <button class="accordion__btn btn" tabindex="-1"></button>
                 </div>
                 <div class="accordion__bottom flex">
-                  <div class="accordion__bottom-img"></div>
+                  <div class="accordion__bottom-img">
+                    <span class="accordion__bottom-img-bg"></span>
+                  </div>
                   <div class="accordion__bottom-text">
                     <h3 class="accordion__title-subtitle subtitle">
                       Здесь пока пусто
@@ -534,7 +738,9 @@
                   <button class="accordion__btn btn" tabindex="-1"></button>
                 </div>
                 <div class="accordion__bottom flex">
-                  <div class="accordion__bottom-img"></div>
+                  <div class="accordion__bottom-img">
+                    <span class="accordion__bottom-img-bg"></span>
+                  </div>
                   <div class="accordion__bottom-text">
                     <h3 class="accordion__title-subtitle subtitle">
                       Здесь пока пусто
@@ -558,10 +764,16 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="developments__slide flex">
-                <img class="developments__img" src="img/developments-1.jpg" alt="Гравюра">
+                <picture>
+                  <source media="(max-width: 320px)" srcset="img/developments-1-320.jpg">
+                  <source media="(max-width: 768px)" srcset="img/developments-1-768.jpg">
+                  <source media="(max-width: 1024px)" srcset="img/developments-1-1024.jpg">
+                  <img class="developments__img" src="img/developments-1.jpg" alt="Гравюра">
+                </picture>
                 <div class="developments__content flex">
-                  <span class="developments__museum">Музей им. Щусева<br>с 20 марта по 30 апреля</span>
-                  <h3 class="developments__subtitle subtitle">Книжная гравюра в&nbsp;живом восприятии</h3>
+                  <span class="developments__museum">Музей им. Щусева</span>
+                  <span class="developments__museum">с 20 марта по 30 апреля</span>
+                  <h3 class="developments__subtitle subtitle">Книжная гравюра в живом восприятии</h3>
                   <p class="developments__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
                     художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.</p>
                   <a class="developments__link" href="#">Подробнее</a>
@@ -570,9 +782,15 @@
             </div>
             <div class="swiper-slide">
               <div class="developments__slide flex">
-                <img class="developments__img" src="img/developments-2.jpg" alt="Гравюра">
+                <picture>
+                  <source media="(max-width: 320px)" srcset="img/developments-2-320.jpg">
+                  <source media="(max-width: 768px)" srcset="img/developments-2-768.jpg">
+                  <source media="(max-width: 1024px)" srcset="img/developments-2-1024.jpg">
+                  <img class="developments__img" src="img/developments-2.jpg" alt="Гравюра">
+                </picture>
                 <div class="developments__content flex">
-                  <span class="developments__museum">ММОМА<br>24 марта 19:00</span>
+                  <span class="developments__museum">ММОМА</span>
+                  <span class="developments__museum">24 марта 19:00</span>
                   <h3 class="developments__subtitle subtitle">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров
                     и&nbsp;Сергей Ильин.</h3>
                   <p class="developments__descr">Высокий уровень вовлечения представителей целевой аудитории является
@@ -583,9 +801,15 @@
             </div>
             <div class="swiper-slide">
               <div class="developments__slide flex">
-                <img class="developments__img" src="img/developments-3.jpg" alt="Гравюра">
+                <picture>
+                  <source media="(max-width: 320px)" srcset="img/developments-3-320.jpg">
+                  <source media="(max-width: 768px)" srcset="img/developments-3-768.jpg">
+                  <source media="(max-width: 1024px)" srcset="img/developments-3-1024.jpg">
+                  <img class="developments__img" src="img/developments-3.jpg" alt="Гравюра">
+                </picture>
                 <div class="developments__content flex">
-                  <span class="developments__museum">Еврейский музей<br>с 31 марта по 21 апреля</span>
+                  <span class="developments__museum">Еврейский музей</span>
+                  <span class="developments__museum">с 31 марта по 21 апреля</span>
                   <h3 class="developments__subtitle subtitle">Выставка &laquo;Формация 2020&raquo;</h3>
                   <p class="developments__descr">Идейные соображения высшего порядка, а&nbsp;также современная
                     методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.</p>
@@ -595,22 +819,34 @@
             </div>
             <div class="swiper-slide flex">
               <div class="developments__slide flex">
-                <img class="developments__img" src="img/developments-4.jpg" alt="Гравюра">
+                <picture>
+                  <source media="(max-width: 320px)" srcset="img/developments-4-320.jpg">
+                  <source media="(max-width: 768px)" srcset="img/developments-4-768.jpg">
+                  <source media="(max-width: 1024px)" srcset="img/developments-4-1024.jpg">
+                  <img class="developments__img" src="img/developments-4.jpg" alt="Гравюра">
+                </picture>
                 <div class="developments__content flex">
-                  <span class="developments__museum">ММАМ<br>с 8 апреля по 20 мая</span>
-                  <h3 class="developments__subtitle subtitle">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора
+                  <span class="developments__museum">ММАМ</span>
+                  <span class="developments__museum">с 8 апреля по 20 мая</span>
+                  <h3 class="developments__subtitle subtitle">Джон Винзор. Фотографии из серии Метафора
                     серебра&raquo;</h3>
                   <p class="developments__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
-                    художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.</p>
+                    художественной династии, которую продолжили его брат Давид и Ридольфо.</p>
                   <a class="developments__link" href="#">Подробнее</a>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="developments__slide flex">
-                <img class="developments__img" src="img/developments-5.jpg" alt="Гравюра">
+                <picture>
+                  <source media="(max-width: 320px)" srcset="img/developments-5-320.jpg">
+                  <source media="(max-width: 768px)" srcset="img/developments-5-768.jpg">
+                  <source media="(max-width: 1024px)" srcset="img/developments-5-1024.jpg">
+                  <img class="developments__img" src="img/developments-5.jpg" alt="Гравюра">
+                </picture>
                 <div class="developments__content flex">
-                  <span class="developments__museum">Третьяковка на&nbsp;Крымском валу<br>с 30 марта по 30 апреля</span>
+                  <span class="developments__museum">Третьяковка на&nbsp;Крымском валу</span>
+                  <span class="developments__museum">с 30 марта по 30 апреля</span>
                   <h3 class="developments__subtitle subtitle">XXIV Международная биеннале молодого искусства</h3>
                   <p class="developments__descr">Внезапно, реплицированные с&nbsp;зарубежных источников, современные
                     исследования.</p>
@@ -619,8 +855,11 @@
               </div>
             </div>
           </div>
-          <div class="developments-button-next dev-sw-btn btn-condition" tabindex="0" aria-label="Следующий слайд"></div>
-          <div class="developments-button-prev dev-sw-btn btn-condition" tabindex="0" aria-label="Предыдущий слайд"></div>
+          <div class="swiper-pagination developments-swiper-pagination"></div>
+          <div class="developments-button-prev dev-sw-btn btn-condition" tabindex="0">
+          </div>
+          <div class="developments-button-next dev-sw-btn btn-condition" tabindex="0">
+          </div>
         </div>
       </div>
     </section>
@@ -632,78 +871,64 @@
           нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё
           независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости,
           из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
-          <span class="descr__tooltip tooltip-text"><span class="tooltip">i</span></span><span class="popup">Пример
-            современных тенденций - современная методология разработки </span> обеспечение нашей деятельности однозначно
-          фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия
-          представителей оппозиции могут быть рассмотрены <span class="descr__tooltip tooltip-text"><span
-              class="tooltip">i</span></span><span class="popup">Приятно, граждане, наблюдать, как сделанные на базе
-            аналитики выводы вызывают у вас эмоции </span> исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых
-          <span class="descr__tooltip tooltip-text"><span class="tooltip">i</span></span><span class="popup">В
-            стремлении повысить качество</span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также
-          представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
-          очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости.
-          Подробнее: <a class="projects__descr-link" href="">blanchard-art.ru/projects</a></p>
+          <button class="js-tooltip-btn tooltip-btn"
+            data-tippy-content="Пример современных тенденций - современная методология разработки"></button> обеспечение
+          нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений.
+          И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <button
+            class="js-tooltip-btn tooltip-btn"
+            data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"></button>
+          исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых <button class="js-tooltip-btn tooltip-btn"
+            data-tippy-content="В стремлении повысить качество"></button> предпосылок. Банальные, но&nbsp;неопровержимые
+          выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям,
+          которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
+          совершенной неузнаваемости. Подробнее: <a class="projects__descr-link" href="">blanchard-art.ru/projects</a>
+        </p>
+
         <div class="projects__partners">
           <h3 class="projects__partners-subtitle subtitle">Партнёры проектов:</h3>
+          <div class="partner-button">
+            <div class="partner-button-prev btn-condition"></div>
+            <div class="partner-button-next btn-condition"></div>
+          </div>
           <div class="projects__partners-swiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide projects__partners__slide">
-                <a class="projects__partner__link" href="">
-                  <img class="projects__partner__img" src="img/partners-1.svg" alt="">
-                  <img class="projects__partner__img-color" src="img/partners-1-col.svg" alt="">
-                </a>
-              </div>
-              <div class="swiper-slide projects__partners__slide">
-                <a class="projects__partner__link" href="">
-                  <img class="projects__partner__img" src="img/partners-2.svg" alt="">
-                  <img class="projects__partner__img-color" src="img/partners-2-col.svg" alt="">
-                </a>
-              </div>
-              <div class="swiper-slide projects__partners__slide">
-                <a class="projects__partner__link" href="">
-                  <img class="projects__partner__img" src="img/partners-3.svg" alt="">
-                  <img class="projects__partner__img-color" src="img/partners-3-col.svg" alt="">
-                </a>
-              </div>
-              <div class="swiper-slide projects__partners__slide">
-                <a class="projects__partner__link" href="">
-                  <img class="projects__partner__img" src="img/partners-4.svg" alt="">
-                  <img class="projects__partner__img-color" src="img/partners-4-col.svg" alt="">
-                </a>
-              </div>
-              <div class="swiper-slide projects__partners__slide">
-                <a class="projects__partner__link" href="">
-                  <img class="projects__partner__img" src="img/partners-5.svg" alt="">
-                  <img class="projects__partner__img-color" src="img/partners-5-col.svg" alt="">
-                </a>
-              </div>
-              <div class="swiper-slide projects__partners__slide">
-                <a class="projects__partner__link" href="">
-                  <img class="projects__partner__img" src="img/partners-6.svg" alt="">
-                  <img class="projects__partner__img-color" src="img/partners-6-col.svg" alt="">
-                </a>
-              </div>
-              <div class="swiper-slide projects__partners__slide">
-                <a class="projects__partner__link" href="">
-                  <img class="projects__partner__img" src="img/partners-7.svg" alt="">
-                  <img class="projects__partner__img-color" src="img/partners-7-col.svg" alt="">
-                </a>
-              </div>
-              <div class="swiper-slide projects__partners__slide">
-                <a class="projects__partner__link" href="">
-                  <img class="projects__partner__img" src="img/partners-8.svg" alt="">
-                  <img class="projects__partner__img-color" src="img/partners-8-col.svg" alt="">
-                </a>
-              </div>
-              <div class="swiper-slide projects__partners__slide">
-                <a class="projects__partner__link" href="">
-                  <img class="projects__partner__img" src="img/partners-9.svg" alt="">
-                  <img class="projects__partner__img-color" src="img/partners-9-col.svg" alt="">
-                </a>
-              </div>
+              <a class="swiper-slide projects__partner__link" href="">
+                <img class="projects__partner__img" src="img/partners-1.svg" alt="">
+                <img class="projects__partner__img-color" src="img/partners-1-col.svg" alt="">
+              </a>
+              <a class="swiper-slide projects__partner__link" href="">
+                <img class="projects__partner__img" src="img/partners-2.svg" alt="">
+                <img class="projects__partner__img-color" src="img/partners-2-col.svg" alt="">
+              </a>
+              <a class="swiper-slide projects__partner__link" href="">
+                <img class="projects__partner__img" src="img/partners-3.svg" alt="">
+                <img class="projects__partner__img-color" src="img/partners-3-col.svg" alt="">
+              </a>
+              <a class="swiper-slide projects__partner__link" href="">
+                <img class="projects__partner__img" src="img/partners-4.svg" alt="">
+                <img class="projects__partner__img-color" src="img/partners-4-col.svg" alt="">
+              </a>
+              <a class="swiper-slide projects__partner__link" href="">
+                <img class="projects__partner__img" src="img/partners-5.svg" alt="">
+                <img class="projects__partner__img-color" src="img/partners-5-col.svg" alt="">
+              </a>
+              <a class="swiper-slide projects__partner__link" href="">
+                <img class="projects__partner__img" src="img/partners-6.svg" alt="">
+                <img class="projects__partner__img-color" src="img/partners-6-col.svg" alt="">
+              </a>
+              <a class="swiper-slide projects__partner__link" href="">
+                <img class="projects__partner__img" src="img/partners-7.svg" alt="">
+                <img class="projects__partner__img-color" src="img/partners-7-col.svg" alt="">
+              </a>
+              <a class="swiper-slide projects__partner__link" href="">
+                <img class="projects__partner__img" src="img/partners-8.svg" alt="">
+                <img class="projects__partner__img-color" src="img/partners-8-col.svg" alt="">
+              </a>
+              <a class="swiper-slide projects__partner__link" href="">
+                <img class="projects__partner__img" src="img/partners-9.svg" alt="">
+                <img class="projects__partner__img-color" src="img/partners-9-col.svg" alt="">
+              </a>
             </div>
-            <div class="partner-button-next btn-condition" aria-label="Следующий слайд"></div>
-            <div class="partner-button-prev btn-condition" aria-label="Предыдущий слайд"></div>
           </div>
         </div>
       </div>
@@ -719,17 +944,18 @@
           <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="contacts__form flex"
             novalidate="novalidate">
             <div class="contacts__form-input-container">
-              <input class="contacts__form-input input-name" id="name" type="text" pattern="[A-Za-zА-Яа-яЁё]" name="name" placeholder="Имя*" data-validate-field="name"
-              required>
+              <input class="contacts__form-input input-name" id="name" type="text" pattern="[A-Za-zА-Яа-яЁё]"
+                name="name" placeholder="Имя*" data-validate-field="name" required>
             </div>
             <div class="contacts__form-input-container">
-              <input class="contacts__form-input input-tel" id="tel" type="tel" name="phone" placeholder="Телефон*" data-validate-field="tel"
-              data-validate-rules="phone" required>
+              <input class="contacts__form-input input-tel" id="tel" type="tel" name="phone" placeholder="Телефон*"
+                data-validate-field="tel" data-validate-rules="phone" required>
             </div>
             <button class="btn form-btn">Заказать обратный звонок</button>
+            <button class="btn form-btn-mob">Заказать</button>
           </form>
           <div class="contacts__connection">
-            <h3 class="contacts__title subtitle">Связаться в один клик</h3>
+            <h3 class="contacts__title contacts__title-bottom subtitle">Связаться в один клик</h3>
             <a class="contacts__connection-link" href="" aria-label="whatsaapp">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -765,10 +991,14 @@
       </div>
     </section>
   </main>
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__container flex">
-      <a class="footer__logo" href="#">
-        <img src="img/footer-logo.svg" alt="Логотип">
+      <a class="footer__logo">
+        <picture>
+          <source media="(max-width: 320px)" srcset="img/footer-logo-320.svg">
+          <img src="img/footer-logo.svg" alt="Логотип">
+        </picture>
       </a>
       <ul class="social flex">
         <li class="social__item">
@@ -807,7 +1037,8 @@
       </ul>
     </div>
   </footer>
-  <!-- <script src="js/just-validate.min.js"></script> -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
   <script src="js/just-validate.production.min.js"></script>
   <script src="js/inputmask.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
@@ -815,8 +1046,8 @@
   <script src="js/jquery-ui.js"></script>
   <script src="js/choices.min.js"></script>
   <script src="js/simplebar.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
-  <script src="js/index.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
