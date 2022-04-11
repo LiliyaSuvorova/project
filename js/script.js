@@ -108,6 +108,7 @@ let gallerySlider = new Swiper(".gallery__swiper", {
   a11y: {
     prevSlideMessage: 'Предыдущий слайд',
     nextSlideMessage: 'Следующий слайд',
+    slideLabelMessage: 'Слайд {{index}}',
   },
 
   breakpoints: {
@@ -195,6 +196,7 @@ let developmentsSwiper = new Swiper(".developments__swiper", {
   a11y: {
     prevSlideMessage: 'Предыдущий слайд',
     nextSlideMessage: 'Следующий слайд',
+    slideLabelMessage: 'Слайд {{index}}',
   },
 });
 
@@ -270,6 +272,7 @@ let projectsPartnersSwiper = new Swiper(".projects__partners-swiper", {
   a11y: {
     prevSlideMessage: 'Предыдущий слайд',
     nextSlideMessage: 'Следующий слайд',
+    slideLabelMessage: 'Слайд {{index}}',
   }
 });
 
@@ -288,7 +291,11 @@ validation
     },
     {
       rule: 'maxLength',
-      value: 5,
+      value: 10,
+      errorMessage: 'Недопустимый формат',
+    },
+    {
+      rule: 'required',
       errorMessage: 'Недопустимый формат',
     },
   ])

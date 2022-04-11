@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
-  <title>Галерея</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Blanchard</title>
 </head>
 
 <body>
@@ -322,52 +323,52 @@
           </div>
           <div class="gallery__swiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide gallery__slide" data-path="modal-1">
-                <picture class="gallery__slide-img">
+              <div class="swiper-slide gallery__slide" data-path="modal-1" tabindex="0">
+                <picture>
                   <source srcset="img/gallery-swiper-1-320.jpg" media="(max-width: 320px)">
                   <source srcset="img/gallery-swiper-1-768.jpg" media="(max-width: 768px)">
                   <source srcset="img/gallery-swiper-1-1024.jpg" media="(max-width: 1024px)">
-                  <img src="img/gallery-swiper-1.jpg" alt="слайд первый">
+                  <img class="gallery__slide-img" src="img/gallery-swiper-1.jpg" alt="слайд первый">
                 </picture>
               </div>
-              <div class="swiper-slide gallery__slide" data-path="modal-2">
-                <picture class="gallery__slide-img">
+              <div class="swiper-slide gallery__slide" data-path="modal-2" tabindex="0">
+                <picture>
                   <source srcset="img/gallery-swiper-2-320.jpg" media="(max-width: 320px)">
                   <source srcset="img/gallery-swiper-2-768.jpg" media="(max-width: 768px)">
                   <source srcset="img/gallery-swiper-2-1024.jpg" media="(max-width: 1024px)">
-                  <img src="img/gallery-swiper-2.jpg" alt="слайд второй">
+                  <img class="gallery__slide-img" src="img/gallery-swiper-2.jpg" alt="слайд второй">
                 </picture>
               </div>
-              <div class="swiper-slide gallery__slide">
-                <picture class="gallery__slide-img">
+              <div class="swiper-slide gallery__slide" tabindex="0">
+                <picture>
                   <source srcset="img/gallery-swiper-3-320.jpg" media="(max-width: 320px)">
                   <source srcset="img/gallery-swiper-3-768.jpg" media="(max-width: 768px)">
                   <source srcset="img/gallery-swiper-3-1024.jpg" media="(max-width: 1024px)">
-                  <img src="img/gallery-swiper-3.jpg" alt="слайд третий">
+                  <img class="gallery__slide-img" src="img/gallery-swiper-3.jpg" alt="слайд третий">
                 </picture>
               </div>
-              <div class="swiper-slide gallery__slide">
-                <picture class="gallery__slide-img">
+              <div class="swiper-slide gallery__slide" tabindex="0">
+                <picture>
                   <source srcset="img/gallery-swiper-4-320.jpg" media="(max-width: 320px)">
                   <source srcset="img/gallery-swiper-4-768.jpg" media="(max-width: 768px)">
                   <source srcset="img/gallery-swiper-4-1024.jpg" media="(max-width: 1024px)">
-                  <img src="img/gallery-swiper-4.jpg" alt="слайд четвертый">
+                  <img class="gallery__slide-img" src="img/gallery-swiper-4.jpg" alt="слайд четвертый">
                 </picture>
               </div>
-              <div class="swiper-slide gallery__slide">
-                <picture class="gallery__slide-img">
+              <div class="swiper-slide gallery__slide" tabindex="0">
+                <picture>
                   <source srcset="img/gallery-swiper-5-320.jpg" media="(max-width: 320px)">
                   <source srcset="img/gallery-swiper-5-768.jpg" media="(max-width: 768px)">
                   <source srcset="img/gallery-swiper-5-1024.jpg" media="(max-width: 1024px)">
-                  <img src="img/gallery-swiper-5.jpg" alt="">
+                  <img class="gallery__slide-img" src="img/gallery-swiper-5.jpg" alt="">
                 </picture>
               </div>
-              <div class="swiper-slide gallery__slide">
-                <picture class="gallery__slide-img">
+              <div class="swiper-slide gallery__slide" tabindex="0">
+                <picture>
                   <source srcset="img/gallery-swiper-6-320.jpg" media="(max-width: 320px)">
                   <source srcset="img/gallery-swiper-6-768.jpg" media="(max-width: 768px)">
                   <source srcset="img/gallery-swiper-6-1024.jpg" media="(max-width: 1024px)">
-                  <img src="img/gallery-swiper-6.jpg" alt="">
+                  <img class="gallery__slide-img" src="img/gallery-swiper-6.jpg" alt="">
                 </picture>
               </div>
             </div>
@@ -869,7 +870,7 @@
         <h2 class="projects__title title">Проекты</h2>
         <p class="projects__descr descr">Предварительные выводы: постоянное информационно-пропагандистское обеспечение
           нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё
-          независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости,
+          независимые государства смешаны с&nbsp;не уникальными данными до&nbsp;степени совершенной неузнаваемости,
           из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
           <button class="js-tooltip-btn tooltip-btn"
             data-tippy-content="Пример современных тенденций - современная методология разработки"></button> обеспечение
@@ -887,8 +888,8 @@
         <div class="projects__partners">
           <h3 class="projects__partners-subtitle subtitle">Партнёры проектов:</h3>
           <div class="partner-button">
-            <div class="partner-button-prev btn-condition"></div>
-            <div class="partner-button-next btn-condition"></div>
+            <div class="partner-button-prev btn-condition sw-btn"></div>
+            <div class="partner-button-next btn-condition sw-btn"></div>
           </div>
           <div class="projects__partners-swiper">
             <div class="swiper-wrapper">
