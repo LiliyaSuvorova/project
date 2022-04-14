@@ -112,11 +112,6 @@ let gallerySlider = new Swiper(".gallery__swiper", {
   },
 
   breakpoints: {
-    // 260: {
-    //   slidesPerView: 1,
-    //   slidesPerGroup: 1,
-    //   spaceBetween: 0
-    // },
     420: {
       slidesPerView: 2,
       slidesPerGroup: 2,
@@ -129,20 +124,6 @@ let gallerySlider = new Swiper(".gallery__swiper", {
       spaceBetween: 50
     }
   },
-
-  // a11y: {
-  //   prevSlideMessage: 'Предыдущий слайд',
-  //   nextSlideMessage: 'Следующий слайд',
-  // }
-
-  // on: {
-  //   /* исправляет баг с margin-top остающимся при смене брейкпоинта, это было нужно в 6-й версии свайпера */
-  //   beforeResize: function () {
-  //     this.slides.forEach((el) => {
-  //       el.style.marginTop = "";
-  //     });
-  //   }
-  // }
 });
 
 // DEVELOPMENTS
@@ -169,11 +150,6 @@ let developmentsSwiper = new Swiper(".developments__swiper", {
   },
 
   breakpoints: {
-    // 320: {
-    //   slidesPerView: 1,
-    //   slidesPerGroup: 1,
-    //   spaceBetween: 0
-    // },
     576: {
       slidesPerView: 2,
       slidesPerGroup: 2,
@@ -209,7 +185,6 @@ $(function () {
     icons: false,
     heightStyle: "content",
     collapsible: true,
-    //  active: false
   });
 });
 
@@ -252,11 +227,6 @@ let projectsPartnersSwiper = new Swiper(".projects__partners-swiper", {
   },
 
   breakpoints: {
-    // 320: {
-    //   slidesPerView: 1,
-    //   slidesPerGroup: 1,
-    //   spaceBetween: 0
-    // },
     681: {
       slidesPerView: 2,
       slidesPerGroup: 2,
@@ -311,20 +281,6 @@ validation
 
 
 // MAP
-// ymaps.ready(init);
-// function init(){
-//     var myMap = new ymaps.Map("map", {
-//         center: [55.75, 37.60],
-//         zoom: 15
-//     });
-//     var myPlacemark = new ymaps.Placemark([55.75, 37.60], {}, {
-//       iconLayout: 'default#image',
-//       iconImageHref: 'img/Placemark.svg',
-//       iconImageSize: [20, 20],
-//   });
-//   myMap.geoObjects.add(myPlacemark);
-// }
-
 ymaps.ready(init);
 function init() {
   const mapElem = document.querySelector('#map');
@@ -355,7 +311,6 @@ function init() {
       iconLayout: "default#image",
       iconImageHref: 'img/Placemark.svg',
       iconImageSize: [20, 20],
-      // iconImageOffset: [-20, -40],
     }
   );
 
