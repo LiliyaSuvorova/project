@@ -372,6 +372,10 @@ ul {
   padding-right: 20px;
 }
 
+.simplebar-track.simplebar-horizontal {
+  display: none;
+}
+
 .header__dropdown-list__item {
   min-height: 40px;
   padding: 9px 14px 12px 14px;
@@ -578,7 +582,7 @@ ul {
 .hero__context {
   position: relative;
   max-width: 597px;
-  padding-top: 71px;
+  padding-top: 142px;
   padding-bottom: 122px;
 }
 
@@ -1789,7 +1793,7 @@ html .ui-button.ui-state-disabled:active {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  transform: translate(26px, -67px);
+  transform: translate(26px, -64px);
   display: flex;
   white-space: nowrap;
 }
